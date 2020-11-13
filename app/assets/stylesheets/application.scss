@@ -12,6 +12,10 @@
 @import "components/index";
 @import "pages/index";
 
+.container {
+  display: flex;
+}
+
 .header {
   background-size: cover;
   height: 240px;
@@ -21,4 +25,46 @@
   color: white;
   font-size: 30px;
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.3)),url("https://images.pexels.com/photos/219998/pexels-photo-219998.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  border-radius: 1px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 22px;
+  color: white;
+  font-weight: bolder;
+  text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  border-radius: 8px;
+
+}
+
+.card:hover {
+  transform:scale(1.1);
+  transition: 0;
+}
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  padding:24px;
+  flex-grow: 1;
+}
+
+@media(max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 540px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
