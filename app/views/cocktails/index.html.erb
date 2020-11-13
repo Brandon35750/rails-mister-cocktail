@@ -1,11 +1,24 @@
+
+
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand">Michel</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+<div class="header">
+  <h1>Ce week end</h1>
+  <p>Qu'allons nous boire ?!</p>
+</div>
+
 <h1>Cocktails List</h1>
 <ul>
   <% @cocktails.each do |cocktail| %>
     <li><%= link_to(cocktail.name, cocktail_path(cocktail)) %></li>
   <% end %>
 </ul>
-
-<%= link_to 'Edit a cocktail', new_cocktail_path(@restaurant) %> |
 
 <div class="card" style="width: 18rem;">
   <% @cocktails.each do |cocktail| %>
@@ -17,3 +30,4 @@
     <% end %>
   </div>
 </div>
+
