@@ -1,6 +1,9 @@
-Show Html
+<h1>Description du Cocktail</h1>
 
 <ul>
   <li>Name: <%= @cocktail.name %></li>
   <li>Dose: <%= @cocktail.doses %></li>
 </ul>
+
+<%= link_to 'Cocktails List', cocktails_path %> |
+<%= link_to 'Edit a new cocktail', new_cocktail_path(@restaurant) %> |

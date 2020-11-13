@@ -1,7 +1,9 @@
-New Html
+<h1>Create your new cocktail</h1>
 
 <%= form_for(@cocktail) do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.submit %>
 <% end %>
+
+<%= link_to 'Cocktails List', cocktails_path %> |
