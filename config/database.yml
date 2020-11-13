@@ -21,9 +21,9 @@ default: &default
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
-production:
+development:
   <<: *default
-  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
+  database: rails_mister_cocktail_development
 
 
 
@@ -82,6 +82,4 @@ test:
 #
 production:
   <<: *default
-  database: rails_mister_cocktail_production
-  username: rails_mister_cocktail
-  password: <%= ENV['RAILS_MISTER_COCKTAIL_DATABASE_PASSWORD'] %>
+  url: <%= ENV['POSTGRESQL_ADDON_URI'] %>
