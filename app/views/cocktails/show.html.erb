@@ -2,8 +2,13 @@
 
 <ul>
   <li>Name: <%= @cocktail.name %></li>
-  <li>Dose: <%= @cocktail.doses %></li>
+  <%= @cocktail.doses.each do|dose| %>
+  <li>Dose: <%= @dose.description%></li>
+  <% end %>
 </ul>
+
+
+
 
 <%= link_to 'Cocktails List', cocktails_path %> |
 <%= link_to 'Edit a new cocktail', new_cocktail_path(@restaurant) %> |
